@@ -1,0 +1,252 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Inter',sans-serif;
+  background:#f6f7f9;
+  color:#1c2733;
+}
+
+.pj-page{
+  --site-accent:#0e7c7b;
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 20px 60px;
+}
+
+/* Header */
+.pj-header{
+  text-align:left;
+  margin-bottom:28px;
+  padding-bottom:20px;
+  border-bottom:1px solid #e2e6ec;
+}
+.pj-header h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:32px;
+  color:#1c2733;
+  letter-spacing:-0.01em;
+}
+.pj-header p{
+  font-size:14px;
+  color:var(--site-accent);
+  font-weight:600;
+  margin-top:6px;
+}
+
+/* Tab navigasi — underline style, tiap tab mewarisi warna jurusannya */
+.pj-tabnav{
+  display:flex;
+  gap:4px;
+  overflow-x:auto;
+  border-bottom:1px solid #e2e6ec;
+  margin-bottom:36px;
+  scrollbar-width:thin;
+}
+.pj-tabnav-item{
+  flex:0 0 auto;
+  padding:11px 18px;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:13px;
+  color:#7a8494;
+  text-decoration:none;
+  border-bottom:2.5px solid transparent;
+  white-space:nowrap;
+  transition:color .15s ease, border-color .15s ease;
+}
+.pj-tabnav-item:hover{
+  color:#1c2733;
+}
+.pj-tabnav-item.active{
+  color:var(--accent, #1c2733);
+  border-bottom-color:var(--accent, #1c2733);
+}
+
+/* Blok per jurusan */
+.pj-jurusan-block{
+  background:#fff;
+  border:1px solid #e2e6ec;
+  border-left:4px solid var(--accent, #0e7c7b);
+  border-radius:10px;
+  padding:32px;
+  margin-bottom:24px;
+  scroll-margin-top:24px;
+}
+
+.pj-jurusan-top{
+  display:flex;
+  gap:26px;
+  align-items:flex-start;
+  margin-bottom:26px;
+}
+.pj-logo-wrap{
+  flex:0 0 104px;
+  width:104px;
+  height:104px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fafbfc;
+  border:1px solid #e2e6ec;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.pj-logo-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.pj-placeholder{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:20px;
+  color:var(--accent, #0e7c7b);
+}
+.pj-jurusan-title{flex:1;min-width:0;}
+.pj-jurusan-kode{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  font-weight:700;
+  color:var(--accent, #0f6fd1);
+  border:1px solid var(--accent, #0f6fd1);
+  border-radius:4px;
+  padding:3px 8px;
+  letter-spacing:.04em;
+  margin-bottom:10px;
+}
+.pj-jurusan-title h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:19px;
+  color:#1c2733;
+  margin-bottom:9px;
+}
+.pj-jurusan-title p{
+  font-size:13.5px;
+  line-height:1.7;
+  color:#4a5361;
+  max-width:62ch;
+}
+
+/* Kartu Kepala Kompetensi Keahlian */
+.pj-kepala-card{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  background:color-mix(in srgb, var(--accent, #0e7c7b) 6%, #fff);
+  border-left:3px solid var(--accent, #0e7c7b);
+  border-radius:8px;
+  padding:14px 18px;
+  margin-bottom:26px;
+}
+.pj-kepala-photo{
+  flex:0 0 60px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#eef0f3;
+  border:2px solid var(--accent, #0e7c7b);
+}
+.pj-kepala-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;
+}
+.pj-kepala-nama{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:14px;
+  color:#1c2733;
+}
+.pj-kepala-jabatan{
+  font-size:11.5px;
+  color:#7a8494;
+  margin-top:2px;
+}
+
+/* Galeri kegiatan */
+.pj-kegiatan-wrap h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:14px;
+  color:#1c2733;
+  margin-bottom:14px;
+  padding-bottom:8px;
+  border-bottom:1px solid #edf0f4;
+}
+.pj-kegiatan-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.pj-kegiatan-card{
+  background:#fff;
+  border:1px solid #e2e6ec;
+  border-top:3px solid var(--accent, #0e7c7b);
+  border-radius:8px;
+  overflow:hidden;
+}
+.pj-kegiatan-photo{
+  width:100%;
+  aspect-ratio:4/3;
+  background:#eef0f3;
+  overflow:hidden;
+}
+.pj-kegiatan-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;
+  transition:transform .3s ease;
+}
+.pj-kegiatan-card:hover .pj-kegiatan-photo img{
+  transform:scale(1.045);
+}
+.pj-kegiatan-caption{
+  padding:10px 12px;
+  font-size:12px;
+  color:#4a5361;
+}
+.pj-placeholder-img{
+  width:100%;height:100%;
+  background:#eef0f3;
+  min-height:80px;
+}
+.pj-subtext{
+  font-size:12.5px;
+  color:#7a8494;
+}
+
+@media (max-width:768px){
+  .pj-jurusan-top{flex-direction:column;text-align:left;}
+  .pj-logo-wrap{width:80px;height:80px;flex-basis:80px;}
+  .pj-kegiatan-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:480px){
+  .pj-kegiatan-grid{grid-template-columns:1fr;}
+  .pj-jurusan-block{padding:22px;}
+}
+
+/* Lightbox */
+.pj-lightbox-overlay{
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(15,20,26,.9);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+.pj-lightbox-overlay.active{display:flex;}
+.pj-lightbox-overlay img{
+  max-width:90vw;
+  max-height:85vh;
+  border-radius:8px;
+}
+.pj-lightbox-close{
+  position:fixed;
+  top:20px;right:26px;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:32px;
+  cursor:pointer;
+  line-height:1;
+}
